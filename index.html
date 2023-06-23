@@ -31,6 +31,21 @@
   </section>
 
   <script>
+    var signosChineses = [
+      "Rato",
+      "Boi",
+      "Tigre",
+      "Coelho",
+      "Dragão",
+      "Serpente",
+      "Cavalo",
+      "Carneiro",
+      "Macaco",
+      "Galo",
+      "Cão",
+      "Porco"
+    ];
+
     $(document).ready(function() {
       $('#btn-calcular').click(function() {
         var ano = $('#ano-nascimento').val();
@@ -40,20 +55,7 @@
     });
 
     function calcularSignoChines(ano) {
-      var signosChineses = [
-        "Rato",
-        "Boi",
-        "Tigre",
-        "Coelho",
-        "Dragão",
-        "Serpente",
-        "Cavalo",
-        "Carneiro",
-        "Macaco",
-        "Galo",
-        "Cão",
-        "Porco"
-      ];
+      console.log(signosChineses);
       var indice = (ano - 1900) % 12;
       return signosChineses[indice];
     }
